@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  /* Colors */
+
+  /* Primary */
+
+--Red: hsl(0, 78%, 62%);
+--Cyan: hsl(180, 62%, 55%);
+--Orange: hsl(34, 97%, 64%);
+--Blue: hsl(212, 86%, 64%);
+
+  /* Neutral */
+
+--Grey-500: hsl(234, 12%, 34%);
+--Grey-400: hsl(212, 6%, 44%);
+--White: hsl(0, 0%, 100%);
+
+  /* Typography */
+
+  /* Body Copy */
+
+--para-font-size: 15px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: var(--White);
+    padding: 4rem;
+}
+
+.group article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem; 
+}
+
+.section_1 {
+    width: 540px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.thin_heading {
+    font-size: 2rem;
+    font-weight: 200;
+    line-height: 2.5rem;
+    color: var(--Grey-400);
+}
+
+.section_1 .heading {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--Grey-500);
+    margin-bottom: .8rem;
+}
+
+.section_1 .para {
+    font-size: var(--para-font-size);
+    font-weight: 400;
+    color: var(--Grey-500);
+    margin-bottom: .8rem;
+}
+
+.boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.section_2,
+.box_1,
+.box_2,
+.section_4 {
+    width: 100%;
+    height: 250px;
+    position: relative;
+    padding: 1rem;
+    cursor: pointer;
+    overflow: hidden;
+    border-top: 3px solid black;
+    border-top-left-radius: .4rem;
+    border-top-right-radius: .4rem;
+    border-bottom-left-radius: .6rem;
+    border-bottom-right-radius: .6rem;
+    box-shadow: 0 4px 10px hsla(210, 6%, 44%, 0.199);
+}
+
+.section_2 {
+    border-top: 3px solid var(--Cyan);
+    margin-top: 8rem;
+}
+
+.box_1 {
+    border-top: 3px solid var(--Red);
+}
+
+.box_2 {
+    border-top: 3px solid var(--Orange);
+}
+
+.section_4 {
+    border-top: 3px solid var(--Blue);
+    margin-top: 8rem;
+}
+
+.heading_1 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--Grey-500);
+    margin-bottom: .8rem;
+}
+
+.para_1 {
+    font-size: var(--para-font-size);
+    font-weight: 400;
+    color: var(--Grey-500);
+    margin-bottom: .8rem;
+}
+
+.section_3 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* 2) Icon pinned to bottom-right */
+.img_icon{
+  position: absolute;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  width: 54px;          /* adjust size as you like */
+  height: auto;
+  display: block;
+  pointer-events: none; /* decorative, so clicks pass through (optional) */
+}
+
+@media (max-width: 800px) {
+    .boxes {
+    flex-direction: column;
+}
+
+.section_2,
+.section_4 {
+    margin-top: 0rem;
+}
+
+}
+
+@media (max-width: 650px) {
+    .section_1 {
+    width: 100%;
+}
+
+}
+
+@media (max-width: 533px) {
+    .thin_heading {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.section_1 .heading {
+    font-size: 1.5rem;
+}
+
+}
+
+@media (max-width: 436px) {
+    body {
+    padding-left: 2rem;    
+    padding-right: 2rem;    
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+}
